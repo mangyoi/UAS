@@ -22,3 +22,4 @@ Route::get('/', [SepatuController::class, 'index'])->name('home');
 
 Route::get('/shop', [SepatuController::class, 'shop'])->name('shop');
 
+Route::get('/pay', [SepatuController::class, 'pay'])->name('pay');
