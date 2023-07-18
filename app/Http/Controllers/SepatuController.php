@@ -70,4 +70,11 @@ class SepatuController extends Controller
             'title'     => 'Shop',
         ]);
     }
+
+    public function pay()
+    {
+        return view('customer.pay',[
+            'title'     => 'Pay',
+        ]);
+    }
 }
