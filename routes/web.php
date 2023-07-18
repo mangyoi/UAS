@@ -18,5 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', [SepatuController::class, 'index'])->name('home');
+
 Route::get('/shop', [SepatuController::class, 'shop'])->name('shop');
 
