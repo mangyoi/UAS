@@ -18,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/purnama', function() {
-    return 'Purnama';
-});
+Route::get('/shop', [SepatuController::class, 'shop'])->name('shop');
+
