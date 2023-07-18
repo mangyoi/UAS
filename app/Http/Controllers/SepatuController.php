@@ -64,4 +64,10 @@ class SepatuController extends Controller
         //
     }
 
+    public function shop()
+    {
+        return view('customer.shop',[
+            'title'     => 'Shop',
+        ]);
+    }
 }
