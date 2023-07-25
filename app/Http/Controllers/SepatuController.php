@@ -21,7 +21,9 @@ class SepatuController extends Controller
      */
     public function create()
     {
-        //
+        return view('customer.pay',[
+            'title'     => 'Pay',
+        ]);
     }
 
     /**
@@ -29,7 +31,41 @@ class SepatuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required' => ':Attribute harus diisi.',
+            'email' => 'Isi :attribute dengan format yang benar',
+            'numeric' => 'Isi :attribute dengan angka'
+        ];
+
+        $validator = Validator::make($request->all(), [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'email' => 'required|email',
+            'no_wa' => 'required|numeric',
+        ], $messages);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        $file = $request->file('formFile');
+
+        if ($file != null) {
+            $originalFilename = $file->getClientOriginalName();
+            $encryptedFilename = $file->hashName();
+
+            // Store File
+            $file->store('public/files');
+        }
+        $simpan = new Datas;
+        $simpan->nama = $request->nama;
+        $simpan->alamat = $request->alamat;
+        $simpan->no_wa = $request->no_wa;
+        $simpan->email = $request->email;
+        if ($file != null) {
+            $simpan->original_filename = $originalFilename;
+            $simpan->encrypted_filename = $encryptedFilename;
+        }
+        $simpan->save();
+        return redirect()->route('sepatu.index');
     }
 
     /**
@@ -71,10 +107,10 @@ class SepatuController extends Controller
         ]);
     }
 
-    public function pay()
-    {
-        return view('customer.pay',[
-            'title'     => 'Pay',
-        ]);
-    }
+    // public function pay()
+    // {
+    //     return view('customer.pay',[
+    //         'title'     => 'Pay',
+    //     ]);
+    // }
 }
