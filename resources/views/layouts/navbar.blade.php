@@ -15,7 +15,10 @@
                     <a class="nav-link {{Request::path() == 'shop' ? 'active' : '';}}" href="/shop">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{Request::path() == 'pay' ? 'active' : '';}}" href="/pay">pay</a>
+                    <a class="nav-link {{Request::path() == 'pay' ? 'active' : '';}}" href="{{route('sepatu.create')}}">pay</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{Request::path() == 'pay' ? 'active' : '';}}" href="/index">pay</a>
                 </li>
             </ul>
             <div class="d-flex gap-4 align-items-center">
