@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SepatuController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +23,8 @@ Route::get('/', [SepatuController::class, 'index'])->name('home');
 
 Route::get('/shop', [SepatuController::class, 'shop'])->name('shop');
 
-Route::get('/pay', [SepatuController::class, 'pay'])->name('pay');
+// Route::get('/pay', [SepatuController::class,'create']);
+
+Route::resource('sepatu', SepatuController::class);
+
+
