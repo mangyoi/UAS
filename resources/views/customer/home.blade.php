@@ -1,7 +1,7 @@
 @extends('welcome')
 @section('content')
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+    <div class="carousel-inner mt-3">
       <div class="carousel-item active">
         <img src="{{Vite::asset('resources/images/slide/banner1.jpg')}}" alt="Gambar 1" class="d-block w-50 mx-auto">
       </div>
@@ -34,7 +34,7 @@
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 400.000</p>
                 <button class="btn btn-outline-primary" style="font-size:24px">
-                    <i class="bi bi-bag-check-fill"></i>
+                    <i class="bi bi-bag-check-fill" oneclick="location.href='{{route('sepatu.create')}}'"></i>
                 </button>
             </div>
         </div>
@@ -61,7 +61,7 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 8.400.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <button class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
                 </button>
             </div>
@@ -122,7 +122,7 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <button class="btn btn-outline-primary" style="font-size:24px" >
                     <i class="bi bi-bag-check-fill"></i>
                 </button>
             </div>
@@ -157,3 +157,6 @@
         </div>
     </div>
 @endsection
+<style>
+
+</style>

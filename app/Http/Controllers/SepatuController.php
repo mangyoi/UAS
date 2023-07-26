@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Models\Datas;
 
 class SepatuController extends Controller
 {
@@ -73,7 +75,8 @@ class SepatuController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Datas::find($id);
+        return view('admin.index', compact('data'));
     }
 
     /**
@@ -81,7 +84,7 @@ class SepatuController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
     }
 
     /**
