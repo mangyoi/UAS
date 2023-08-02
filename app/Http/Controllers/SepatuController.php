@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Datas;
+use Illuminate\Support\Facades\DB;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\DatasExport;
+use App\Models\Product;
 
 class SepatuController extends Controller
 {
@@ -13,6 +17,7 @@ class SepatuController extends Controller
      */
     public function index()
     {
+        // $datas = Datas::all();
         return view('customer.home',[
             'title'     => 'Home',
         ]);
@@ -23,8 +28,11 @@ class SepatuController extends Controller
      */
     public function create()
     {
+        $latestId=$_GET['id'];
+        $products=Product::find($latestId);
         return view('customer.pay',[
-            'title'     => 'Pay',
+            'products'=>$products,
+            'id'=>$products
         ]);
     }
 
@@ -75,8 +83,12 @@ class SepatuController extends Controller
      */
     public function show(string $id)
     {
-        $data = Datas::find($id);
-        return view('admin.index', compact('data'));
+        // $data = Datas::findOrFail($id);
+
+        // return view('admin.index', compact('data'));
+        $datas = Datas::all();
+
+        return view('admin.index', compact('datas'));
     }
 
     /**
@@ -100,20 +112,32 @@ class SepatuController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('datas')
+        ->where('id', $id)
+        ->delete();
+
+        return redirect()->route('sepatu.index');
     }
 
-    public function shop()
-    {
-        return view('customer.shop',[
-            'title'     => 'Shop',
-        ]);
-    }
-
-    // public function pay()
+    // public function shop()
     // {
-    //     return view('customer.pay',[
-    //         'title'     => 'Pay',
+    //     return view('customer.shop',[
+    //         'title'     => 'Shop',
     //     ]);
     // }
+
+    // public function home()
+    // {
+    //     return view('customer.home',[
+    //         'title'     => 'Home',
+    //     ]);
+    // }
+
+    public function exportExcel()
+    {
+        $datas = Datas::all();
+
+        return Excel::download(new DatasExport, 'Perlu Dikirim.xlsx');
+    }
+
 }
