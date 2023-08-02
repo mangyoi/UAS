@@ -18,7 +18,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link {{Request::path() == 'pay' ? 'active' : '';}}" href="{{route('sepatu.show',['sepatu'=>1])}}">admin</a>
+                    <a class="nav-link {{Request::path() == 'pay' ? 'active' : '';}}" href="{{route('sepatu.show',['sepatu'=>1])}}">Admin</a>
                 </li>
             </ul>
         </div>
