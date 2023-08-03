@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Admins extends Model
 {
     use HasFactory;
+    public function sepatu(){
+        return $this->hasMany(Sepatu::class);
+    }
+    protected $table = 'products';
 }

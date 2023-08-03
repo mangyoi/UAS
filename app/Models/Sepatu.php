@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sepatu extends Model
 {
     use HasFactory;
+    public function admins(){
+        return $this->belongsTo(Admins::class);
+    }
 }
