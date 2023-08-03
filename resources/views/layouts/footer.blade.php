@@ -3,7 +3,7 @@ font-family: 'Inter', sans-serif;">
     <div class="d-flex justify-content-between gap-5 pt-4 mt-5">
         <div class="title-left w-25" style="margin-left: 10px;">
             <div class="header-title fs-4 mb-2 font-weight-bolder">
-                TOKO SEPATU
+                BranWalk
             </div>
             <p>Sepatu berkualitas dengan harga bersahabat ya disini tempatnya.
                 sudah mempunyai lisensi jadi teman teman tidak perlu takut sepatu yang
@@ -24,7 +24,7 @@ font-family: 'Inter', sans-serif;">
                     <p>join reseller hubungi email berikut</p>
                 </li>
                 <li>
-                    tokosepatu@gmail.com
+                    branwalk@gmail.com
                 </li>
             </ul>
         </div>
@@ -40,7 +40,7 @@ font-family: 'Inter', sans-serif;">
         </div>
     </div>
     <div class="text-center p-lg-4 mt-3">
-        Copy right @TokoSepatu</i>
+        Copy right @BranWalk</i>
     </div>
 </div>
 <style>

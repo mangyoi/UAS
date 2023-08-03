@@ -23,7 +23,7 @@
 </div>
 
 <h4 class="mt-5">Best Seller</h4>
-    <div class="content mt-3 d-flex flex-lg-wrap gap-5 mb-5">
+    <div class="content mt-3 d-flex flex-lg-wrap gap-5 mb-5 justify-content-center">
         <div class="card" style="width:220px;">
             <div class="card-header m-auto" style="border-radius:5px;">
                 <img src="{{Vite::asset('resources/images/sepatugunung.jpeg')}}" alt="sepatu" style="width: 100%;">
@@ -33,9 +33,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 400.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
-                    <i class="bi bi-bag-check-fill" oneclick="location.href='{{route('sepatu.create')}}'"></i>
-                </button>
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
+                    <i class="bi bi-bag-check-fill" ></i>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -47,9 +47,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 650.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -61,9 +61,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 8.400.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -75,9 +75,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 400.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
 
@@ -94,9 +94,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -108,9 +108,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px" href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -122,9 +122,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px" >
+                <a class="btn btn-outline-primary" style="font-size:24px"  href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -136,9 +136,9 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px"  href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
         <div class="card" style="width:220px;">
@@ -150,12 +150,13 @@
             </div>
             <div class="card-footer d-flex flex-row justify-content-between align-items-center">
                 <p class="m-0" style="font-size: 16px; font-weight:600;">Rp. 560.000</p>
-                <button class="btn btn-outline-primary" style="font-size:24px">
+                <a class="btn btn-outline-primary" style="font-size:24px"  href="{{route('sepatu.create')}}">
                     <i class="bi bi-bag-check-fill"></i>
-                </button>
+                </a>
             </div>
         </div>
     </div>
+
 @endsection
 <style>
 
